@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 950px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        .plan-wrapper {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .plan-card {
+            flex: 1;
+            min-width: 320px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .plan-card:hover {
+            transform: scale(1.02);
+        }
+        
+        /* プランごとの色分け */
+        .plan-a { border-color: #3498db; }
+        .plan-b { border-color: #e67e22; background-color: #fffaf5; }
+
+        .plan-header {
+            padding: 20px;
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .plan-a .plan-header { background: linear-gradient(to right, #3498db, #2980b9); }
+        .plan-b .plan-header { background: linear-gradient(to right, #e67e22, #d35400); }
+
+        .price-tag {
+            padding: 20px;
+            font-size: 2.2em;
+            font-weight: bold;
+            text-align: center;
+            color: #2c3e50;
+        }
+        .price-tag span { font-size: 0.4em; color: #7f8c8d; }
+
+        .features {
+            padding: 0 30px;
+            list-style: none;
+            flex-grow: 1;
+        }
+        .features li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .features li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        .witness-tag {
+            margin: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .plan-a .witness-tag { background: #ebf5fb; color: #2980b9; border: 1px dashed #3498db; }
+        .plan-b .witness-tag { background: #fdf2e9; color: #d35400; border: 1px dashed #e67e22; }
+
+        .footer-note {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .pro-badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>公正証書遺言サポート料金表</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>公正証書遺言作成サポート</h1>
+    <p class="subtitle">〜 行政書士・AFPの知見で、円満な相続をカタチにします 〜</p>
+
+    <div class="plan-wrapper">
+        <div class="plan-card plan-a">
+            <div class="plan-header">スタンダード</div>
+            <div class="price-tag">75,000<span>円（税別）</span></div>
+            <ul class="features">
+                <li>専門家による遺言書起案</li>
+                <li>戸籍・公的書類の収集代行</li>
+                <li>公証人との綿密な打ち合わせ</li>
+                <li>当日の公証役場同行・サポート</li>
+            </ul>
+            <div class="witness-tag">
+                👥 証人：1名（行政書士）込み<br>
+                <small style="font-weight: normal;">（もう1名はご友人等にご依頼ください）</small>
+            </div>
+        </div>
+
+        <div class="plan-card plan-b">
+            <div class="plan-header">完全お任せ安心</div>
+            <div class="price-tag">85,000<span>円（税別）</span></div>
+            <ul class="features">
+                <div class="pro-badge">一番人気</div>
+                <li>スタンダードの全内容を網羅</li>
+                <li><b>証人2名を当事務所で完全手配</b></li>
+                <li>守秘義務の徹底・プライバシー保護</li>
+                <li>将来の紛争リスクを最小限に！</li>
+            </ul>
+            <div class="witness-tag">
+                👑 証人：2名とも当事務所で手配<br>
+                <small style="font-weight: normal;">（お知り合いに頼む必要はありません）</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <p>✅ <b>プロの視点：</b> トラブル回避のため、当事務所では「推定相続人」を証人に立てることはお勧めしておりません。</p>
+        <p>※ 公証役場へ支払う【公証人手数料】は別途となります。</p>
+        <p>※ 財産の種類が著しく多い場合は別途お見積りいたします。</p>
+        <p>※ 各種証明書類の代金は実費となります。
+    </div>
+</div>
+
+</body>
+</html>
